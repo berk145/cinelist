@@ -1,8 +1,8 @@
 # CineList
 
-This application allows users to search for movies, TV series, and episodes of TV series, displaying results with details like name, release date, and IMDb ID
+This application allows users to search for movies, TV series, and episodes of TV series, displaying results with details like name, release date, and IMDb ID.
 
-. Results are paginated, and users can also filter by release year. Clicking on an item navigates to a details page with poster, title, duration, genre, director, cast, and IMDb rating.
+Results are paginated, and users can also filter by release year. Clicking on an item navigates to a details page with poster, title, duration, genre, director, cast, and IMDb rating.
 
 #### Technology Stack
 
