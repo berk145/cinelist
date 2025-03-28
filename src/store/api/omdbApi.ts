@@ -16,18 +16,14 @@ export const omdbApi = createApi({
       { searchTerm: string; year: string | undefined; type: string | undefined; page: number }
     >({
       query: ({ searchTerm, year, page, type }) => {
-        console.log('page', page);
-
         const searchParamObject: ISearchParamObject = {
           s: searchTerm,
           y: year,
           page,
           type,
         };
-        console.log('searchParamObject', searchParamObject);
 
         const searchParam = new URLSearchParams(omitBy(searchParamObject, isNil));
-        console.log('searchParam', searchParam.toString());
 
         return `?apikey=${API_KEY}&${searchParam.toString()}`;
       },

@@ -11,7 +11,7 @@ export const Detail = () => {
   const navigate = useNavigate();
   const params = useParams();
   const id = params['id']! satisfies string;
-  const { data, /* error,  */ isLoading } = useGetMoviesByImdbIDQuery({ imdbID: id });
+  const { data, isLoading } = useGetMoviesByImdbIDQuery({ imdbID: id });
 
   const handleGoBack = () => {
     navigate(-1);
