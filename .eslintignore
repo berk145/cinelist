@@ -1,0 +1,11 @@
+build
+coverage
+node_modules
+dist
+
+*.config.js
+*.config.ts
+*.config.json
+**/.git
+**/.svn
+**/.hg
