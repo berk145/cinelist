@@ -4,8 +4,8 @@ import { Button, Container, Grid, Pagination, TextField, Typography } from '@mui
 
 import { useGetMoviesByTitleQuery } from '../../store/api/omdbApi';
 import '../../styles/home.scss';
-import { CardSkeleton } from '../atoms/CardSkeleton';
 import { Select } from '../atoms/Select';
+import { CardSkeleton } from '../molecules/CardSkeleton';
 import { MovieCard } from '../organisms/MovieCard';
 
 export const Home = () => {

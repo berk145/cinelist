@@ -1,7 +1,7 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
-import { isEmpty, isNil, omitBy } from 'lodash';
+import { isNil, omitBy } from 'lodash';
 
-const API_KEY = '2eb85e94'; //TODO move this to config or env file
+import { API_KEY } from '../../config/omdb';
 
 interface ISearchParamObject {
   [x: string]: any;
