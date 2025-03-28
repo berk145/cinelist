@@ -62,7 +62,7 @@ export const Home = () => {
   const tempList = new Array(10).fill(0); // To fill the page with skeletons
 
   return (
-    <Container maxWidth='md'>
+    <Container className='contentContainer' maxWidth='md'>
       <Grid container justifyContent={'center'} spacing={2}>
         <TextField
           label='Search by name'

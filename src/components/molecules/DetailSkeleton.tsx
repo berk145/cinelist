@@ -1,5 +1,7 @@
 import { Box, Grid, Skeleton } from '@mui/material';
 
+import '../../styles/detailSkeleton.scss';
+
 export const DetailSkeleton = () => {
   return (
     <Box sx={{ display: 'flex', flexDirection: { xs: 'column', md: 'row' }, gap: 2 }}>

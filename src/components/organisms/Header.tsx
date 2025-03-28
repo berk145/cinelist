@@ -12,7 +12,7 @@ const Header = () => {
   };
 
   return (
-    <AppBar position='static' elevation={0} sx={{ backgroundColor: '#f5f5f5' }}>
+    <AppBar position='fixed' elevation={2} sx={{ backgroundColor: '#f5f5f5' }}>
       <Toolbar>
         <Box component='img' src={Logo} onClick={onClick} className='logo' />
       </Toolbar>

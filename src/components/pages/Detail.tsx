@@ -18,7 +18,7 @@ export const Detail = () => {
   };
 
   return (
-    <Container maxWidth='md' sx={{ mt: 4 }}>
+    <Container className='contentContainer' maxWidth='md'>
       <IconButton color='primary' onClick={handleGoBack}>
         <ArrowBack />
       </IconButton>
