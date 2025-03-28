@@ -4,7 +4,7 @@ import '../../styles/detailSkeleton.scss';
 
 export const DetailSkeleton = () => {
   return (
-    <Box sx={{ display: 'flex', flexDirection: { xs: 'column', md: 'row' }, gap: 2 }}>
+    <Box display={'flex'} flexDirection={{ xs: 'column', md: 'row' }} gap={2}>
       <Skeleton variant='rounded' width={300} height={450} />
       <Grid width={'50%'} sx={{ mx: 2 }}>
         <Skeleton className='skeleton' variant='rounded' width={'100%'} height={42} />

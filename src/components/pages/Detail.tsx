@@ -19,13 +19,13 @@ export const Detail = () => {
 
   return (
     <Container className='contentContainer' maxWidth='md'>
-      <IconButton color='primary' onClick={handleGoBack}>
+      <IconButton color='primary' onClick={handleGoBack} sx={{ mb: 2 }}>
         <ArrowBack />
       </IconButton>
       {!data || isLoading ? (
         <DetailSkeleton />
       ) : (
-        <Box sx={{ display: 'flex', flexDirection: { xs: 'column', md: 'row' }, gap: 2 }}>
+        <Box display={'flex'} flexDirection={{ xs: 'column', md: 'row' }} gap={2}>
           <Box
             component='img'
             sx={{
@@ -56,20 +56,20 @@ export const Detail = () => {
             <Typography variant='body1' sx={{ mt: 2 }}>
               {data.Plot}
             </Typography>
-            <Typography variant='body2' sx={{ mt: 1, color: 'text.secondary' }}>
+            <Typography variant='body2' color='text.secondary' sx={{ mt: 2 }}>
               <b>Director:</b> {data.Director}
             </Typography>
-            <Typography variant='body2' sx={{ color: 'text.secondary' }}>
+            <Typography variant='body2' color='text.secondary'>
               <b>Writer:</b> {data.Writer}
             </Typography>
-            <Typography variant='body2' sx={{ color: 'text.secondary' }}>
+            <Typography variant='body2' color='text.secondary'>
               <b>Stars:</b> {data.Actors}
             </Typography>
-            <Typography variant='body2' sx={{ color: 'text.secondary' }}>
+            <Typography variant='body2' color='text.secondary'>
               <b>Country:</b> {data.Country}
             </Typography>
-            <Typography variant='h6' sx={{ mt: 2 }}>
-              IMDb Rating: {data.imdbRating} ⭐ ({data.imdbVotes} votes)
+            <Typography variant='body1' sx={{ mt: 2 }}>
+              IMDb Rating: {data.imdbRating}⭐ ({data.imdbVotes} votes)
             </Typography>
           </Grid>
         </Box>

@@ -1,6 +1,8 @@
 import { useNavigate } from 'react-router';
 
-import { Card, CardActionArea, CardContent, CardMedia, Typography } from '@mui/material';
+import { Card, CardActionArea, CardContent, CardMedia, Grid, Typography } from '@mui/material';
+
+import '../../styles/movieCard.scss';
 
 interface IProps {
   data: Search;
@@ -14,8 +16,8 @@ export const MovieCard = ({ data }: IProps) => {
   };
 
   return (
-    <Card sx={{ maxWidth: 345, width: '100%' }} onClick={cardOnClick}>
-      <CardActionArea className='cardActionArea'>
+    <Card sx={{ maxWidth: 345, width: '100%' }} onClick={cardOnClick} className='movieCard'>
+      <CardActionArea>
         <CardMedia
           component='img'
           sx={{ objectFit: 'contain' }}
@@ -24,18 +26,22 @@ export const MovieCard = ({ data }: IProps) => {
           image={Poster}
         />
         <CardContent>
-          <Typography gutterBottom variant='h5' component='div'>
+          <Typography gutterBottom variant='h6' component='div'>
             {Title}
           </Typography>
-          <Typography variant='h6' gutterBottom>
-            {Year}
-            <Typography variant='caption' sx={{ color: 'text.disabled' }} ml={2}>
-              {Type}
+          <Grid>
+            <Grid display={'flex'} justifyContent={'flex-start'} alignItems={'baseline'} gap={2}>
+              <Typography variant='body2' color='text.disabled'>
+                {Year}
+              </Typography>
+              <Typography variant='body2' textTransform='capitalize' color='text.disabled'>
+                {Type}
+              </Typography>
+            </Grid>
+            <Typography variant='overline' color='text.disabled'>
+              {imdbID}
             </Typography>
-          </Typography>
-          <Typography variant='caption' sx={{ color: 'text.disabled' }}>
-            {imdbID.toUpperCase()}
-          </Typography>
+          </Grid>
         </CardContent>
       </CardActionArea>
     </Card>

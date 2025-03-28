@@ -15,7 +15,7 @@ export const CardSkeleton = () => {
           <Skeleton className='skeleton' variant='rounded' width={'100%'} height={32} />
           <Skeleton className='skeleton' variant='rounded' width={'100%'} height={32} />
           <Skeleton className='skeleton' variant='rounded' width={'100%'} height={14} />
-          <Typography variant='caption' sx={{ color: 'text.disabled' }}></Typography>
+          <Typography variant='caption' color='text.disabled'></Typography>
         </CardContent>
       </CardActionArea>
     </Card>
